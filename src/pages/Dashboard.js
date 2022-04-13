@@ -24,6 +24,9 @@ function Dashboard( {...props} ) {
             <Link to="/invoice/remove">
                 <button className="primary-button">Remove invoice</button>
             </Link>
+            <Link to="/report/read">
+                <button className="primary-button">Remove invoice</button>
+            </Link>
 
             
         </div>

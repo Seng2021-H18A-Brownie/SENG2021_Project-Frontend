@@ -13,16 +13,17 @@ import ListReport from './pages/ReportList';
 import invoiceEmailReceive from './pages/invoiceEmailReceive';
 import InvoiceSend from './pages/invoiceSend';
 import InvoiceRemove from './pages/invoiceRemove';
+import ReportsRead from './pages/reportsRead';
 // import API_receive must be protected route
 
 function App() {
   // Title of the app
   document.title = 'Invoice Hub';
   // Creating states for token, noToken
-  const [token, SetToken] = React.useState(localStorage.getItem('token'));
+  const [token, SetToken] = React.useState(sessionStorage.getItem('token'));
   
   function setCredentials(token) {
-    localStorage.setItem('token', JSON.stringify(token));
+    sessionStorage.setItem('token', JSON.stringify(token));
     SetToken(JSON.stringify(token))
   }
   return (
@@ -57,6 +58,7 @@ function App() {
           <ProtectedRoute path="/report/list" component={ListReport} />
           <ProtectedRoute path="/invoice/send" component={InvoiceSend} />
           <ProtectedRoute path="/invoice/remove" component={InvoiceRemove} />
+          <ProtectedRoute path="/report/read" component={ReportsRead} />
 
         </Switch>
       </BrowserRouter>
