@@ -1,4 +1,4 @@
-# This project is uploaded to heroku directly 
+# This project is uploaded to heroku directly as Heroku does not let me push to this repository after hosting on Heroku. This includes other branches
 
 # Getting Started with Create React App
 
